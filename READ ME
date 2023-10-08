@@ -1,0 +1,52 @@
+Steps:
+Create file config.php and enter the code
+
+<?php
+$conn = mysqli_connect("localhost","root","","testing") or die("Connection Failed!");
+?>
+
+1. Create a file Named as: api-fetch-all.php
+    Test this file by puting the file on browser example: http://localhost/php-rest-api/api-fetch-all.php
+    If record displayed then successful.
+2. Now test it using POSTMAN Application. Open application and set to GET and enter the url example: http://localhost/php-rest-api/api-fetch-all.php
+    If record display then successful
+3. Create a file Named as: api-fetch-single.php
+4. Now test it using POSTMAN Application. Open application and set to POST and enter the url example: http://localhost/php-rest-api/api-fetch-single.php
+    In body tag pass the json format and also set the header Key Content-Type and Value application/json.
+    {
+      "sid":"1"
+    }
+    Record of student with id as 1 will be display then successful
+5. Create a file Named as: api-insert.php
+6. Now test it using POSTMAN Application. Open application and set to POST and enter the url example:http://localhost/php-rest-api/api-insert.php
+   set the header and in body enter the json format the data you want to insert:
+   {
+      "sname":"Pratik Waghade",
+      "sage":"23",
+      "scity":"Pune"
+    }
+   Check if it is there in the database and Inserted Record message
+7. Create a file Named as: api-update.php
+8. Now test it using POSTMAN Application. Open application and set to PUT and enter the url example:http://localhost/php-rest-api/api-update.php
+   set the header and in body enter the json format the data you want to insert:
+   {
+      "sid" : 4,
+      "sname":"Pratik Waghade",
+      "sage":24,   //age 23 to 24
+      "scity":"Pune"
+    }
+   Check if it is there in the database and Updated Record message
+9. Create a file Named as: api-delete.php
+10. Now test it using POSTMAN Application. Open application and set to PUT and enter the url example:http://localhost/php-rest-api/api-delete.php
+   set the header and in body enter the json format the data you want to insert:
+      {
+         "sid" : 4
+       }
+  Check if it is there in the database and Deleted Record message
+9. Create a file Named as: api-search.php
+10. Now test it using POSTMAN Application. Open application and set to PUT and enter the url example:http://localhost/php-rest-api/api-search.php
+     set the header and in body enter the json format the data you want to insert:
+        {
+           "search" : "R"
+         }
+    Records will be displayed
